@@ -93,6 +93,7 @@ if ($method === 'POST') {
         if (file_put_contents($dest, $clean) === false) {
             json_error('Unable to save file', 500);
         }
+        @chmod($dest, 0644);
     } else {
         // Loosely verify the real file content matches an image/pdf signature
         // family; browsers can send inaccurate client MIME types, so we only
@@ -114,7 +115,9 @@ if ($method === 'POST') {
         if (!move_uploaded_file($file['tmp_name'], $dest)) {
             json_error('Unable to store uploaded file', 500);
         }
-        @chmod($dest, 0640);
+        // Publicly-served file: needs to be readable by the web server's
+        // static-file path, which may run as a different user than PHP.
+        @chmod($dest, 0644);
     }
 
     $publicPath = '/uploads/' . ($isImage ? 'images' : 'documents') . '/' . $newName;

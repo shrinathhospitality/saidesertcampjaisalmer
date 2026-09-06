@@ -29,9 +29,19 @@ define('LOG_DIR', CMS_ROOT . '/cms-logs');
 
 ini_set('error_log', LOG_DIR . '/php-error.log');
 
-foreach ([DATA_DIR, BACKUPS_DIR, UPLOADS_IMAGES_DIR, UPLOADS_DOCS_DIR, LOG_DIR] as $dir) {
+// cms-data/cms-backups/cms-logs must never be web-servable, so they get
+// restrictive permissions. uploads/ is the opposite: it exists specifically
+// to be served publicly over HTTP, so it needs group/other-readable
+// permissions -- some hosts (e.g. a static-file server that doesn't run as
+// the PHP process's own user) can't serve a file it can't read.
+foreach ([DATA_DIR, BACKUPS_DIR, LOG_DIR] as $dir) {
     if (!is_dir($dir)) {
         @mkdir($dir, 0750, true);
+    }
+}
+foreach ([UPLOADS_IMAGES_DIR, UPLOADS_DOCS_DIR] as $dir) {
+    if (!is_dir($dir)) {
+        @mkdir($dir, 0755, true);
     }
 }
 
