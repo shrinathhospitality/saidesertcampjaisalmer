@@ -51,15 +51,36 @@ The code auto-generates a deny-all `.htaccess` inside those folders the first ti
 runs, so they stay blocked from direct browser access — but outside-the-web-root is
 strictly safer and should be your default.
 
+### Important: per-website FTP accounts on Hostinger's "Websites" plans
+
+On Hostinger's multi-site hPanel ("Websites" section, one FTP account per site), the
+FTP account's `PWD` reports its landing folder as `/public_html` — which is genuinely
+correct, **not** a cosmetic label. `CDUP` from there appears to succeed and `PWD`
+then reports `/`, but this is misleading: file transfer operations (`LIST`, `STOR`)
+issued while positioned above `public_html` fail (the passive-mode data connection is
+refused) even though the control-connection commands report success. In practice,
+**this FTP account can only read/write inside `public_html`** — confirmed against a
+live Hostinger "Websites" account. Use Hostinger's **File Manager** (in hPanel, not
+FTP) if you need to create or edit `cms-data/`/`cms-backups/` above `public_html` by
+hand; File Manager is not subject to the same restriction. If File Manager access
+above `public_html` isn't available on your plan either, fall back to the
+inside-`public_html` layout described just above instead.
+
+Day-to-day operation is unaffected either way: the PHP API itself (not FTP) reads and
+writes `cms-data/`/`cms-backups/` using the correct filesystem path (`dirname(__DIR__,
+2)` from `public/api/config.php`), which resolves correctly regardless of what FTP can
+reach — this limitation only matters for the one-time initial upload of seed content.
+
 ## Step by step
 
 1. **Build locally:** `npm run build`.
-2. **Create the folders** at your account root (above `public_html`) via Hostinger
-   File Manager: `cms-data/` and `cms-backups/`.
-3. **Upload the seed JSON files** into `cms-data/` — the same files from this
-   repository's `cms-data/` folder (or your own edited versions). This is your
-   starting content; it becomes editable from the admin panel from that point on.
-4. **Upload the contents of `dist/`** into `public_html/` (overwrite if redeploying).
+2. **Create the folders** at your account root (above `public_html`) using Hostinger's
+   **File Manager** (not FTP — see the note above): `cms-data/` and `cms-backups/`.
+3. **Upload the seed JSON files** into `cms-data/` via File Manager — the same files
+   from this repository's `cms-data/` folder (or your own edited versions). This is
+   your starting content; it becomes editable from the admin panel from that point on.
+4. **Upload the contents of `dist/`** into `public_html/` (overwrite if redeploying) —
+   this part works fine over FTP/CI, since it never needs to leave `public_html`.
 5. **Set the `CMS_SETUP_TOKEN` environment variable** (hPanel → your site → Advanced
    → PHP Configuration / Environment Variables) — see INITIAL-ADMIN-SETUP.md.
 6. **Set folder permissions** (via File Manager's permissions dialog or FTP client):
