@@ -1,0 +1,25 @@
+# Sai Desert Camp & Resort CMS API — Apache config for public_html/api
+
+# Never let Apache list directory contents.
+Options -Indexes -FollowSymLinks
+Options +SymLinksIfOwnerMatch
+
+# Internal helper files are included by the entry scripts and must never be
+# requested directly (they assume config.php has already run).
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^lib/ - [F,L]
+</IfModule>
+<Files "config.php">
+    <RequireAll>
+        Require all denied
+    </RequireAll>
+</Files>
+
+# Only these entry scripts are callable; everything else under /api (besides
+# the .php entry points above) is refused.
+<FilesMatch "\.(json|log|md|env)$">
+    Require all denied
+</FilesMatch>
+
+php_flag display_errors off

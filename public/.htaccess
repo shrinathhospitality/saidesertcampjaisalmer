@@ -1,0 +1,37 @@
+# Sai Desert Camp & Resort — root .htaccess for public_html
+# Handles the React Router (SPA) refresh-without-404 problem while leaving
+# the PHP API and uploaded media to be served/executed normally.
+
+Options -Indexes
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Let real files, the API, and uploaded media pass through untouched.
+    RewriteCond %{REQUEST_URI} ^/api/ [OR]
+    RewriteCond %{REQUEST_URI} ^/uploads/
+    RewriteRule ^ - [L]
+
+    # Any other request that isn't an existing file or directory falls back
+    # to index.html so React Router can render the matching client route
+    # instead of Apache returning a 404 on refresh/deep-link.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ /index.html [L]
+</IfModule>
+
+# Never serve JSON content files directly if they ever end up under the web
+# root by mistake (they are expected to live outside it — see
+# HOSTINGER-DEPLOYMENT.md — this is defense-in-depth only).
+<FilesMatch "\.(json)$">
+    <RequireAll>
+        Require all denied
+    </RequireAll>
+</FilesMatch>

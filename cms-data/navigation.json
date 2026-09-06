@@ -1,0 +1,105 @@
+[
+    {
+        "id": "nav-home",
+        "label": "Home",
+        "path": "/",
+        "external": false,
+        "newTab": false,
+        "enabled": true,
+        "order": 0
+    },
+    {
+        "id": "nav-about",
+        "label": "About",
+        "path": "/about",
+        "external": false,
+        "newTab": false,
+        "enabled": true,
+        "order": 1
+    },
+    {
+        "id": "nav-stay",
+        "label": "Stay",
+        "path": "/rooms",
+        "external": false,
+        "newTab": false,
+        "enabled": true,
+        "order": 2,
+        "children": [
+            {
+                "id": "nav-stay-rooms",
+                "label": "Rooms & Villas",
+                "path": "/rooms",
+                "description": "Suites, villas, and residences",
+                "external": false,
+                "newTab": false,
+                "enabled": true
+            },
+            {
+                "id": "nav-stay-packages",
+                "label": "Packages",
+                "path": "/packages",
+                "description": "Seasonal offers and curated escapes",
+                "external": false,
+                "newTab": false,
+                "enabled": true
+            },
+            {
+                "id": "nav-stay-gallery",
+                "label": "Gallery",
+                "path": "/gallery",
+                "description": "A visual tour of the estate",
+                "external": false,
+                "newTab": false,
+                "enabled": true
+            }
+        ]
+    },
+    {
+        "id": "nav-stories",
+        "label": "Stories",
+        "path": "/blog",
+        "external": false,
+        "newTab": false,
+        "enabled": true,
+        "order": 3,
+        "children": [
+            {
+                "id": "nav-stories-journal",
+                "label": "Journal",
+                "path": "/blog",
+                "description": "Destination, dining, wellness",
+                "external": false,
+                "newTab": false,
+                "enabled": true
+            },
+            {
+                "id": "nav-stories-privacy",
+                "label": "Privacy Policy",
+                "path": "/privacy-policy",
+                "description": "Guest privacy information",
+                "external": false,
+                "newTab": false,
+                "enabled": true
+            },
+            {
+                "id": "nav-stories-terms",
+                "label": "Terms",
+                "path": "/terms-conditions",
+                "description": "Reservation terms",
+                "external": false,
+                "newTab": false,
+                "enabled": true
+            }
+        ]
+    },
+    {
+        "id": "nav-contact",
+        "label": "Contact",
+        "path": "/contact",
+        "external": false,
+        "newTab": false,
+        "enabled": true,
+        "order": 4
+    }
+]

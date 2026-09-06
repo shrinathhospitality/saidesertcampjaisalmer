@@ -1,0 +1,23 @@
+[
+  { "label": "Home", "path": "/" },
+  { "label": "About", "path": "/about" },
+  {
+    "label": "Stay",
+    "path": "/rooms",
+    "children": [
+      { "label": "Rooms & Villas", "path": "/rooms", "description": "Suites, villas, and residences" },
+      { "label": "Packages", "path": "/packages", "description": "Seasonal offers and curated escapes" },
+      { "label": "Gallery", "path": "/gallery", "description": "A visual tour of the estate" }
+    ]
+  },
+  {
+    "label": "Stories",
+    "path": "/blog",
+    "children": [
+      { "label": "Journal", "path": "/blog", "description": "Destination, dining, wellness" },
+      { "label": "Privacy Policy", "path": "/privacy-policy", "description": "Guest privacy information" },
+      { "label": "Terms", "path": "/terms-conditions", "description": "Reservation terms" }
+    ]
+  },
+  { "label": "Contact", "path": "/contact" }
+]

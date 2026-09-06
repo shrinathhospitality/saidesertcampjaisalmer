@@ -1,0 +1,86 @@
+{
+    "siteName": "Sai Desert Camp & Resort",
+    "tagline": "A private world of rare calm",
+    "baseUrl": "https://example.com",
+    "logo": "/brand/logo.png",
+    "logoWidth": 314,
+    "logoHeight": 105,
+    "favicon": "/brand/favicon-32.png",
+    "bookNowLabel": "Book Now",
+    "primaryColor": "#d8b26e",
+    "darkColor": "#10100e",
+    "currency": "USD",
+    "defaultImage": "/assets/hero-1.svg",
+    "newsletterTitle": "Private notes from the estate",
+    "newsletterText": "Receive seasonal journeys, chef collaborations, wellness rituals, and preferred-stay privileges.",
+    "contact": {
+        "phone": "+1 000 000 0000",
+        "whatsapp": "",
+        "email": "reservations@saidesertcampandresort.example",
+        "address": "1 Celestial Drive, Placeholder Bay, PB 10001",
+        "hours": "Reservations: 24 hours | Guest services: 24 hours",
+        "location": "Secluded Coastline, Placeholder Bay",
+        "coordinates": {
+            "latitude": "00.0000",
+            "longitude": "00.0000"
+        },
+        "mapEmbed": "Google Maps placeholder: replace with your embed or map provider later.",
+        "mapLink": ""
+    },
+    "social": [
+        {
+            "name": "Instagram",
+            "url": "https://instagram.com",
+            "icon": "instagram",
+            "enabled": true
+        },
+        {
+            "name": "Facebook",
+            "url": "https://facebook.com",
+            "icon": "facebook",
+            "enabled": true
+        },
+        {
+            "name": "X",
+            "url": "https://x.com",
+            "icon": "x",
+            "enabled": true
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com",
+            "icon": "linkedin",
+            "enabled": true
+        }
+    ],
+    "header": {
+        "announcement": {
+            "enabled": false,
+            "text": "",
+            "link": ""
+        }
+    },
+    "footer": {
+        "aboutText": "A destination resort imagined for travelers who prefer quiet grandeur, intuitive service, and spaces that feel collected rather than decorated.",
+        "showNewsletter": true,
+        "copyrightText": "",
+        "credit": {
+            "text": "",
+            "url": ""
+        },
+        "blocks": {
+            "quickLinks": true,
+            "legal": true,
+            "contact": true,
+            "social": true
+        }
+    },
+    "seoDefaults": {
+        "title": "Sai Desert Camp & Resort",
+        "description": "A private world of rare calm",
+        "ogImage": "/assets/hero-1.svg",
+        "twitterHandle": ""
+    },
+    "customHeadScript": "",
+    "updatedAt": "2026-09-05T00:00:00+00:00"
+}

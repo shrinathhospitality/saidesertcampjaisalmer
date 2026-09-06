@@ -1,0 +1,36 @@
+{
+  "name": "Sai Desert Camp & Resort",
+  "shortName": "Sai Desert Camp",
+  "location": "Secluded Coastline, Placeholder Bay",
+  "address": "1 Celestial Drive, Placeholder Bay, PB 10001",
+  "phone": "+1 000 000 0000",
+  "email": "reservations@saidesertcampandresort.example",
+  "hours": "Reservations: 24 hours | Guest services: 24 hours",
+  "description": "A destination resort imagined for travelers who prefer quiet grandeur, intuitive service, and spaces that feel collected rather than decorated.",
+  "longDescription": "Sai Desert Camp & Resort blends contemporary resort architecture with handcrafted detail, private gardens, cinematic pools, destination dining, and a spa program inspired by elemental rituals. Every suite and villa is designed to be edited, calm, and deeply personal.",
+  "mapEmbed": "Google Maps placeholder: replace with your embed or map provider later.",
+  "coordinates": { "latitude": "00.0000", "longitude": "00.0000" },
+  "stats": [
+    { "label": "Private Suites", "value": 86, "suffix": "" },
+    { "label": "Acres of Gardens", "value": 42, "suffix": "" },
+    { "label": "Guest Rating", "value": 5, "suffix": "/5" },
+    { "label": "Signature Rituals", "value": 28, "suffix": "+" }
+  ],
+  "heroSlides": [
+    { "eyebrow": "A New Language of Luxury", "title": "Stillness, service, and cinematic beauty", "text": "Wake to textured sunlight, private pools, curated rituals, and a level of hospitality that moves quietly around you.", "image": "/assets/hero-1.svg", "type": "image" },
+    { "eyebrow": "Suites & Villas", "title": "Designed for privacy, framed by nature", "text": "Generous indoor-outdoor sanctuaries with artisanal materials, sculptural baths, and terraces made for golden-hour dining.", "image": "/assets/hero-2.svg", "type": "image" },
+    { "eyebrow": "Dining, Spa & Celebration", "title": "Experiences with a sense of occasion", "text": "From candlelit tasting menus to wedding pavilions and restorative spa journeys, every detail is composed.", "image": "/assets/hero-3.svg", "type": "image" }
+  ],
+  "experiences": [
+    { "title": "Restaurant", "text": "A fire-led culinary atelier with seasonal tasting menus, cellar pairings, and private chef tables.", "image": "/assets/restaurant.svg" },
+    { "title": "Infinity Pool", "text": "Tiered reflective pools, shaded cabanas, sunset service, and quiet adult-only terraces.", "image": "/assets/pool.svg" },
+    { "title": "Spa", "text": "Elemental rituals, hammam suites, hydrotherapy gardens, sound therapy, and expert bodywork.", "image": "/assets/spa.svg" },
+    { "title": "Conference Hall", "text": "A refined grand salon with modular layouts, discreet technology, and dedicated event concierges.", "image": "/assets/conference.svg" },
+    { "title": "Wedding Venue", "text": "Garden pavilions, ocean-view lawns, couture menus, and a full celebration design studio.", "image": "/assets/wedding.svg" }
+  ],
+  "attractions": [
+    { "title": "Old Fort Walk", "distance": "12 min", "image": "/assets/attraction-1.svg" },
+    { "title": "Sapphire Bay", "distance": "18 min", "image": "/assets/attraction-2.svg" },
+    { "title": "Botanical Garden", "distance": "25 min", "image": "/assets/attraction-3.svg" }
+  ]
+}

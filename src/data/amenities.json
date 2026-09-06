@@ -1,0 +1,8 @@
+[
+  { "title": "Private Butler", "description": "Thoughtful, anticipatory service throughout every stay.", "icon": "butler" },
+  { "title": "Fine Dining", "description": "Seasonal restaurants, private tables, and cellar experiences.", "icon": "dining" },
+  { "title": "Spa & Wellness", "description": "Hydrotherapy, ritual suites, movement, and recovery programs.", "icon": "spa" },
+  { "title": "Airport Transfers", "description": "Luxury vehicle transfers and meet-and-assist arrivals.", "icon": "car" },
+  { "title": "Event Salon", "description": "Board meetings, launches, weddings, and private celebrations.", "icon": "event" },
+  { "title": "Concierge", "description": "Curated itineraries, cultural access, and destination specialists.", "icon": "concierge" }
+]

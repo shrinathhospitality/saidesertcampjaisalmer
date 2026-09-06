@@ -1,0 +1,6 @@
+[
+  { "question": "What time are check-in and check-out?", "answer": "Check-in begins at 3:00 PM and check-out is at 12:00 PM. Flexible arrangements may be available on request." },
+  { "question": "Can the website connect to a booking engine later?", "answer": "Yes. The component architecture isolates booking CTAs, so a booking engine, payment gateway, CMS, or hotel PMS can be integrated later." },
+  { "question": "Are pets allowed?", "answer": "Select villas can accommodate pets with advance notice. Update this policy in the local JSON file." },
+  { "question": "Do you host weddings and corporate retreats?", "answer": "Yes. The estate includes garden pavilions, a grand salon, private dining rooms, and event concierge support." }
+]

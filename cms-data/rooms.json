@@ -1,0 +1,340 @@
+[
+    {
+        "id": "signature-pool-villa",
+        "slug": "signature-pool-villa",
+        "title": "Signature Pool Villa",
+        "shortDescription": "A private villa with plunge pool, shaded terrace, sculptural bath, and discreet butler service.",
+        "description": "The Signature Pool Villa is a serene indoor-outdoor sanctuary crafted for privacy. Expect layered textures, a private plunge pool, a garden dining terrace, linen-draped king bedroom, sculptural soaking bath, walk-in wardrobe, and personalized arrival amenities.",
+        "price": 1250,
+        "oldPrice": null,
+        "priceSuffix": "/ night",
+        "duration": "",
+        "occupancy": "2 adults",
+        "capacity": 2,
+        "bedType": "King bed",
+        "size": "118 sqm",
+        "active": true,
+        "featured": true,
+        "order": 0,
+        "image": "/assets/room-villa.svg",
+        "gallery": [
+            "/assets/room-villa.svg",
+            "/assets/gallery-2.svg",
+            "/assets/pool.svg"
+        ],
+        "amenities": [
+            "Private pool",
+            "Butler service",
+            "Outdoor shower",
+            "Terrace dining",
+            "Premium minibar",
+            "High-speed Wi-Fi"
+        ],
+        "features": [
+            "Garden arrival court",
+            "Soaking tub",
+            "Custom robes",
+            "Turn-down ritual"
+        ],
+        "inclusions": [],
+        "exclusions": [],
+        "highlights": [],
+        "itinerary": [],
+        "policies": [
+            "Smoke-free interior",
+            "Flexible cancellation on selected rates",
+            "Children welcome with advance arrangement"
+        ],
+        "reviews": [
+            {
+                "name": "Maya",
+                "rating": 5,
+                "text": "Private, warm, and beautifully detailed."
+            }
+        ],
+        "ctaLabel": "Enquire Now",
+        "whatsappMessage": "Hello, I would like to enquire about the Signature Pool Villa.",
+        "seo": {
+            "title": "Signature Pool Villa",
+            "description": "A private villa with plunge pool, shaded terrace, sculptural bath, and discreet butler service.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/room-villa.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "royal-terrace-suite",
+        "slug": "royal-terrace-suite",
+        "title": "Royal Terrace Suite",
+        "shortDescription": "A luminous suite with panoramic terrace, separate salon, marble bath, and curated art.",
+        "description": "The Royal Terrace Suite places dramatic views at the center of the experience, with a generous living salon, breakfast terrace, king bedroom, marble bath, writing desk, cocktail cabinet, and artwork selected from regional studios.",
+        "price": 980,
+        "oldPrice": null,
+        "priceSuffix": "/ night",
+        "duration": "",
+        "occupancy": "2 adults + 1 child",
+        "capacity": 3,
+        "bedType": "King or twin",
+        "size": "92 sqm",
+        "active": true,
+        "featured": true,
+        "order": 1,
+        "image": "/assets/room-suite.svg",
+        "gallery": [
+            "/assets/room-suite.svg",
+            "/assets/gallery-1.svg",
+            "/assets/restaurant.svg"
+        ],
+        "amenities": [
+            "Panoramic terrace",
+            "Living salon",
+            "Marble bath",
+            "In-room dining",
+            "Bluetooth audio",
+            "Espresso bar"
+        ],
+        "features": [
+            "Separate living room",
+            "Sunset terrace",
+            "Curated art",
+            "Pillow menu"
+        ],
+        "inclusions": [],
+        "exclusions": [],
+        "highlights": [],
+        "itinerary": [],
+        "policies": [
+            "No smoking",
+            "Extra bed upon request",
+            "Advance deposit may apply"
+        ],
+        "reviews": [
+            {
+                "name": "Jonas",
+                "rating": 5,
+                "text": "The terrace became our favorite room."
+            }
+        ],
+        "ctaLabel": "Enquire Now",
+        "whatsappMessage": "Hello, I would like to enquire about the Royal Terrace Suite.",
+        "seo": {
+            "title": "Royal Terrace Suite",
+            "description": "A luminous suite with panoramic terrace, separate salon, marble bath, and curated art.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/room-suite.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "presidential-residence",
+        "slug": "presidential-residence",
+        "title": "Presidential Residence",
+        "shortDescription": "A landmark residence with private pool, cinema lounge, chef kitchen, and hosted dining pavilion.",
+        "description": "The Presidential Residence is created for extended stays, landmark celebrations, and guests who want uncompromising privacy. It includes a principal bedroom, guest bedroom, cinema lounge, dining pavilion, chef kitchen, garden pool, and dedicated residential host.",
+        "price": 4200,
+        "oldPrice": null,
+        "priceSuffix": "/ night",
+        "duration": "",
+        "occupancy": "4 adults",
+        "capacity": 4,
+        "bedType": "Two king beds",
+        "size": "340 sqm",
+        "active": true,
+        "featured": true,
+        "order": 2,
+        "image": "/assets/room-residence.svg",
+        "gallery": [
+            "/assets/room-residence.svg",
+            "/assets/gallery-8.svg",
+            "/assets/wedding.svg"
+        ],
+        "amenities": [
+            "Private host",
+            "Cinema lounge",
+            "Chef kitchen",
+            "Pool garden",
+            "Dining pavilion",
+            "Private bar"
+        ],
+        "features": [
+            "Two bedrooms",
+            "Private driveway",
+            "Security-ready layout",
+            "Hosted dinners"
+        ],
+        "inclusions": [],
+        "exclusions": [],
+        "highlights": [],
+        "itinerary": [],
+        "policies": [
+            "Minimum stay may apply",
+            "Event approval required",
+            "Security deposit required"
+        ],
+        "reviews": [
+            {
+                "name": "Leila",
+                "rating": 5,
+                "text": "A complete private estate experience."
+            }
+        ],
+        "ctaLabel": "Enquire Now",
+        "whatsappMessage": "Hello, I would like to enquire about the Presidential Residence.",
+        "seo": {
+            "title": "Presidential Residence",
+            "description": "A landmark residence with private pool, cinema lounge, chef kitchen, and hosted dining pavilion.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/room-residence.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "garden-sanctuary",
+        "slug": "garden-sanctuary",
+        "title": "Garden Sanctuary",
+        "shortDescription": "A calm hideaway overlooking fragrant gardens with a reading alcove and deep soaking bath.",
+        "description": "This garden-facing sanctuary is designed for slow mornings and restorative evenings. Sliding screens open onto a planted veranda while warm stone, woven textures, and soft lighting create a private retreat.",
+        "price": 720,
+        "oldPrice": null,
+        "priceSuffix": "/ night",
+        "duration": "",
+        "occupancy": "2 adults",
+        "capacity": 2,
+        "bedType": "King bed",
+        "size": "74 sqm",
+        "active": true,
+        "featured": false,
+        "order": 3,
+        "image": "/assets/room-garden.svg",
+        "gallery": [
+            "/assets/room-garden.svg",
+            "/assets/spa.svg",
+            "/assets/gallery-3.svg"
+        ],
+        "amenities": [
+            "Garden veranda",
+            "Reading alcove",
+            "Soaking bath",
+            "Yoga mat",
+            "Tea ritual",
+            "Wi-Fi"
+        ],
+        "features": [
+            "Quiet garden outlook",
+            "Blackout curtains",
+            "Local ceramics",
+            "Rain shower"
+        ],
+        "inclusions": [],
+        "exclusions": [],
+        "highlights": [],
+        "itinerary": [],
+        "policies": [
+            "No smoking",
+            "Best available rate cancellation applies"
+        ],
+        "reviews": [
+            {
+                "name": "Elena",
+                "rating": 5,
+                "text": "Restful and beautifully quiet."
+            }
+        ],
+        "ctaLabel": "Enquire Now",
+        "whatsappMessage": "Hello, I would like to enquire about the Garden Sanctuary.",
+        "seo": {
+            "title": "Garden Sanctuary",
+            "description": "A calm hideaway overlooking fragrant gardens with a reading alcove and deep soaking bath.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/room-garden.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "ocean-celeste-suite",
+        "slug": "ocean-celeste-suite",
+        "title": "Ocean Celeste Suite",
+        "shortDescription": "A sweeping ocean-view suite with floating daybed, dining terrace, and sunken lounge.",
+        "description": "The Ocean Celeste Suite is a dramatic horizon-facing retreat with a sunken lounge, floating terrace daybed, generous bath, and an intimate dining area arranged for sunrise breakfast or moonlit service.",
+        "price": 1540,
+        "oldPrice": null,
+        "priceSuffix": "/ night",
+        "duration": "",
+        "occupancy": "2 adults",
+        "capacity": 2,
+        "bedType": "King bed",
+        "size": "132 sqm",
+        "active": false,
+        "featured": false,
+        "order": 4,
+        "image": "/assets/room-ocean.svg",
+        "gallery": [
+            "/assets/room-ocean.svg",
+            "/assets/hero-2.svg",
+            "/assets/gallery-8.svg"
+        ],
+        "amenities": [
+            "Ocean terrace",
+            "Daybed",
+            "Sunken lounge",
+            "Dining table",
+            "Premium bath",
+            "Concierge"
+        ],
+        "features": [
+            "Horizon views",
+            "Indoor-outdoor plan",
+            "Artisan textiles",
+            "Signature scent"
+        ],
+        "inclusions": [],
+        "exclusions": [],
+        "highlights": [],
+        "itinerary": [],
+        "policies": [
+            "No smoking",
+            "Waitlist available when sold out"
+        ],
+        "reviews": [
+            {
+                "name": "Omar",
+                "rating": 5,
+                "text": "The view was unforgettable."
+            }
+        ],
+        "ctaLabel": "Join Waitlist",
+        "whatsappMessage": "Hello, I would like to enquire about the Ocean Celeste Suite.",
+        "seo": {
+            "title": "Ocean Celeste Suite",
+            "description": "A sweeping ocean-view suite with floating daybed, dining terrace, and sunken lounge.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/room-ocean.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    }
+]

@@ -1,0 +1,91 @@
+[
+    {
+        "id": "gallery-1",
+        "title": "Arrival Gallery",
+        "category": "Architecture",
+        "type": "image",
+        "src": "/assets/gallery-1.svg",
+        "alt": "Arrival Gallery",
+        "span": "lg:row-span-2",
+        "order": 0,
+        "active": true
+    },
+    {
+        "id": "gallery-2",
+        "title": "Villa Terrace",
+        "category": "Suites",
+        "type": "image",
+        "src": "/assets/gallery-2.svg",
+        "alt": "Villa Terrace",
+        "span": "",
+        "order": 1,
+        "active": true
+    },
+    {
+        "id": "gallery-3",
+        "title": "Hydrotherapy Suite",
+        "category": "Wellness",
+        "type": "image",
+        "src": "/assets/gallery-3.svg",
+        "alt": "Hydrotherapy Suite",
+        "span": "",
+        "order": 2,
+        "active": true
+    },
+    {
+        "id": "gallery-4",
+        "title": "Chef Counter",
+        "category": "Dining",
+        "type": "image",
+        "src": "/assets/gallery-4.svg",
+        "alt": "Chef Counter",
+        "span": "lg:col-span-2",
+        "order": 3,
+        "active": true
+    },
+    {
+        "id": "gallery-5",
+        "title": "Pool at Dusk",
+        "category": "Pool",
+        "type": "image",
+        "src": "/assets/gallery-5.svg",
+        "alt": "Pool at Dusk",
+        "span": "",
+        "order": 4,
+        "active": true
+    },
+    {
+        "id": "gallery-6",
+        "title": "Garden Wedding",
+        "category": "Events",
+        "type": "image",
+        "src": "/assets/gallery-6.svg",
+        "alt": "Garden Wedding",
+        "span": "",
+        "order": 5,
+        "active": true
+    },
+    {
+        "id": "gallery-7",
+        "title": "Board Salon",
+        "category": "Events",
+        "type": "image",
+        "src": "/assets/gallery-7.svg",
+        "alt": "Board Salon",
+        "span": "",
+        "order": 6,
+        "active": true
+    },
+    {
+        "id": "gallery-8",
+        "title": "Sunset Film",
+        "category": "Video",
+        "type": "video",
+        "src": "/assets/gallery-8.svg",
+        "alt": "Sunset Film",
+        "videoUrl": "https://example.com/video-placeholder",
+        "span": "lg:col-span-2",
+        "order": 7,
+        "active": true
+    }
+]

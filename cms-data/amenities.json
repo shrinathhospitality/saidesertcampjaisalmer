@@ -1,0 +1,50 @@
+[
+    {
+        "id": "amenity-butler",
+        "title": "Private Butler",
+        "description": "Thoughtful, anticipatory service throughout every stay.",
+        "icon": "butler",
+        "order": 0,
+        "active": true
+    },
+    {
+        "id": "amenity-dining",
+        "title": "Fine Dining",
+        "description": "Seasonal restaurants, private tables, and cellar experiences.",
+        "icon": "dining",
+        "order": 1,
+        "active": true
+    },
+    {
+        "id": "amenity-spa",
+        "title": "Spa & Wellness",
+        "description": "Hydrotherapy, ritual suites, movement, and recovery programs.",
+        "icon": "spa",
+        "order": 2,
+        "active": true
+    },
+    {
+        "id": "amenity-transfers",
+        "title": "Airport Transfers",
+        "description": "Luxury vehicle transfers and meet-and-assist arrivals.",
+        "icon": "car",
+        "order": 3,
+        "active": true
+    },
+    {
+        "id": "amenity-event",
+        "title": "Event Salon",
+        "description": "Board meetings, launches, weddings, and private celebrations.",
+        "icon": "event",
+        "order": 4,
+        "active": true
+    },
+    {
+        "id": "amenity-concierge",
+        "title": "Concierge",
+        "description": "Curated itineraries, cultural access, and destination specialists.",
+        "icon": "concierge",
+        "order": 5,
+        "active": true
+    }
+]

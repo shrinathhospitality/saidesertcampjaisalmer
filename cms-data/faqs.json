@@ -1,0 +1,34 @@
+[
+    {
+        "id": "faq-1",
+        "question": "What time are check-in and check-out?",
+        "answer": "Check-in begins at 3:00 PM and check-out is at 12:00 PM. Flexible arrangements may be available on request.",
+        "category": "general",
+        "order": 0,
+        "active": true
+    },
+    {
+        "id": "faq-2",
+        "question": "Can the website connect to a booking engine later?",
+        "answer": "Yes. The component architecture isolates booking CTAs, so a booking engine, payment gateway, CMS, or hotel PMS can be integrated later.",
+        "category": "general",
+        "order": 1,
+        "active": true
+    },
+    {
+        "id": "faq-3",
+        "question": "Are pets allowed?",
+        "answer": "Select villas can accommodate pets with advance notice. Update this policy from the admin FAQ editor.",
+        "category": "general",
+        "order": 2,
+        "active": true
+    },
+    {
+        "id": "faq-4",
+        "question": "Do you host weddings and corporate retreats?",
+        "answer": "Yes. The estate includes garden pavilions, a grand salon, private dining rooms, and event concierge support.",
+        "category": "general",
+        "order": 3,
+        "active": true
+    }
+]

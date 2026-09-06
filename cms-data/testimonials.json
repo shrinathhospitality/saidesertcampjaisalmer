@@ -1,0 +1,5 @@
+[
+  { "id": "testimonial-1", "name": "Amelia Hart", "location": "Design Director", "rating": 5, "review": "The property has that rare kind of luxury that never announces itself. Every room, ritual, and meal felt deeply considered.", "image": "", "order": 0, "active": true },
+  { "id": "testimonial-2", "name": "Rafael Monteiro", "location": "Founder", "rating": 5, "review": "A seamless stay from arrival to departure. The villa, spa, and private dinner were composed with exceptional taste.", "image": "", "order": 1, "active": true },
+  { "id": "testimonial-3", "name": "Noor Alvi", "location": "Travel Editor", "rating": 5, "review": "Quiet, cinematic, and precise. It feels less like a hotel and more like a private residence with extraordinary service.", "image": "", "order": 2, "active": true }
+]

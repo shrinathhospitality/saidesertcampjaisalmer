@@ -1,0 +1,17 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+
+# CMS runtime data: never commit real secrets, PII, backups, or uploaded media.
+# The seed files under cms-data/ (site-settings.json, packages.json, etc.) are
+# fine to track; these two carry password hashes / guest PII once live.
+cms-data/users.json
+cms-data/enquiries.json
+cms-backups/
+cms-logs/
+public/uploads/images/*
+public/uploads/documents/*
+!public/uploads/images/.gitkeep
+!public/uploads/documents/.gitkeep

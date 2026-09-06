@@ -1,0 +1,262 @@
+[
+    {
+        "id": "moonlit-romance",
+        "slug": "moonlit-romance",
+        "title": "Moonlit Romance",
+        "duration": "3 nights",
+        "price": 3200,
+        "oldPrice": null,
+        "priceSuffix": "/ package",
+        "capacity": "2 adults",
+        "active": true,
+        "featured": true,
+        "order": 0,
+        "shortDescription": "A private escape with candlelit dining, spa rituals, champagne arrival, and sunset cruise.",
+        "description": "Designed for anniversaries, honeymoons, and proposals, Moonlit Romance layers intimate settings with thoughtful rituals and seamless private service.",
+        "image": "/assets/package-romance.svg",
+        "gallery": [
+            "/assets/package-romance.svg",
+            "/assets/restaurant.svg",
+            "/assets/hero-3.svg"
+        ],
+        "inclusions": [
+            "Daily breakfast",
+            "Champagne arrival",
+            "One private dinner",
+            "Couples spa ritual",
+            "Sunset cruise"
+        ],
+        "exclusions": [
+            "Flights",
+            "Airport transfers unless selected",
+            "Premium cellar selections"
+        ],
+        "itinerary": [
+            "Arrival and champagne ritual",
+            "Spa journey and garden dinner",
+            "Sunset cruise and late check-out"
+        ],
+        "highlights": [
+            "Private dining pavilion",
+            "Couples wellness suite",
+            "Personal celebration planner"
+        ],
+        "amenities": [],
+        "faqs": [
+            {
+                "question": "Can this be customized for proposals?",
+                "answer": "Yes, the experience can include floral design, music, photography, and private venue styling."
+            }
+        ],
+        "ctaLabel": "Enquire Now",
+        "whatsappMessage": "Hello, I would like to enquire about the Moonlit Romance package.",
+        "seo": {
+            "title": "Moonlit Romance Package",
+            "description": "A private escape with candlelit dining, spa rituals, champagne arrival, and sunset cruise.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/package-romance.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "wellness-reset",
+        "slug": "wellness-reset",
+        "title": "Wellness Reset",
+        "duration": "5 nights",
+        "price": 5400,
+        "oldPrice": null,
+        "priceSuffix": "/ package",
+        "capacity": "2 adults",
+        "active": true,
+        "featured": true,
+        "order": 1,
+        "shortDescription": "A restorative program of movement, nutrition, bodywork, sleep rituals, and hydrotherapy.",
+        "description": "The Wellness Reset brings together expert practitioners, spa therapies, nourishing cuisine, guided movement, and restorative design.",
+        "image": "/assets/package-wellness.svg",
+        "gallery": [
+            "/assets/package-wellness.svg",
+            "/assets/spa.svg",
+            "/assets/gallery-3.svg"
+        ],
+        "inclusions": [
+            "Wellness consultation",
+            "Daily breakfast",
+            "Three spa therapies",
+            "Movement classes",
+            "Sleep ritual amenities"
+        ],
+        "exclusions": [
+            "Medical services",
+            "Specialist treatments beyond package",
+            "Flights"
+        ],
+        "itinerary": [
+            "Arrival consult",
+            "Movement and hydrotherapy",
+            "Nutrition workshop",
+            "Deep recovery therapies",
+            "Integration and departure"
+        ],
+        "highlights": [
+            "Personal wellness host",
+            "Hydrotherapy garden",
+            "Chef-designed menus"
+        ],
+        "amenities": [],
+        "faqs": [
+            {
+                "question": "Is the program suitable for beginners?",
+                "answer": "Yes. Movement and treatments are adapted after the initial consultation."
+            }
+        ],
+        "ctaLabel": "Enquire Now",
+        "whatsappMessage": "Hello, I would like to enquire about the Wellness Reset package.",
+        "seo": {
+            "title": "Wellness Reset Package",
+            "description": "A restorative program of movement, nutrition, bodywork, sleep rituals, and hydrotherapy.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/package-wellness.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "family-legacy",
+        "slug": "family-legacy",
+        "title": "Family Legacy",
+        "duration": "4 nights",
+        "price": 4600,
+        "oldPrice": null,
+        "priceSuffix": "/ package",
+        "capacity": "Family",
+        "active": true,
+        "featured": false,
+        "order": 2,
+        "shortDescription": "A multigenerational stay with villa living, cultural activities, children's dining, and hosted experiences.",
+        "description": "Family Legacy is built around spacious accommodation, flexible dining, cultural discovery, childcare options, and moments that work for every generation.",
+        "image": "/assets/package-family.svg",
+        "gallery": [
+            "/assets/package-family.svg",
+            "/assets/room-residence.svg",
+            "/assets/attraction-3.svg"
+        ],
+        "inclusions": [
+            "Daily breakfast",
+            "Children's welcome ritual",
+            "One family excursion",
+            "Private barbecue",
+            "Kids amenities"
+        ],
+        "exclusions": [
+            "Babysitting beyond included hours",
+            "Flights",
+            "Premium excursions"
+        ],
+        "itinerary": [
+            "Arrival and pool evening",
+            "Garden discovery",
+            "Cultural excursion",
+            "Private barbecue and family portraits"
+        ],
+        "highlights": [
+            "Residential villas",
+            "Flexible dining",
+            "Curated family excursions"
+        ],
+        "amenities": [],
+        "faqs": [
+            {
+                "question": "Can connecting rooms be arranged?",
+                "answer": "Yes, subject to availability and room category."
+            }
+        ],
+        "ctaLabel": "Enquire Now",
+        "whatsappMessage": "Hello, I would like to enquire about the Family Legacy package.",
+        "seo": {
+            "title": "Family Legacy Package",
+            "description": "A multigenerational stay with villa living, cultural activities, children's dining, and hosted experiences.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/package-family.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "executive-retreat",
+        "slug": "executive-retreat",
+        "title": "Executive Retreat",
+        "duration": "2 nights",
+        "price": 8900,
+        "oldPrice": null,
+        "priceSuffix": "/ package",
+        "capacity": "Group",
+        "active": true,
+        "featured": false,
+        "order": 3,
+        "shortDescription": "A refined leadership offsite with grand salon, dining, wellness breaks, and concierge logistics.",
+        "description": "The Executive Retreat pairs high-spec meeting environments with quiet hospitality, destination dining, and decompression rituals between sessions.",
+        "image": "/assets/package-business.svg",
+        "gallery": [
+            "/assets/package-business.svg",
+            "/assets/conference.svg",
+            "/assets/restaurant.svg"
+        ],
+        "inclusions": [
+            "Meeting salon",
+            "Coffee breaks",
+            "Two lunches",
+            "One hosted dinner",
+            "AV support",
+            "Wellness break"
+        ],
+        "exclusions": [
+            "Accommodation unless bundled",
+            "Flights",
+            "Custom production"
+        ],
+        "itinerary": [
+            "Arrival and strategy dinner",
+            "Full-day meeting program",
+            "Wellness morning and departures"
+        ],
+        "highlights": [
+            "Discreet arrival flow",
+            "Modular salon",
+            "Event concierge"
+        ],
+        "amenities": [],
+        "faqs": [
+            {
+                "question": "Can branding be added?",
+                "answer": "Yes, tasteful event branding and custom production can be arranged."
+            }
+        ],
+        "ctaLabel": "Enquire Now",
+        "whatsappMessage": "Hello, I would like to enquire about the Executive Retreat package.",
+        "seo": {
+            "title": "Executive Retreat Package",
+            "description": "A refined leadership offsite with grand salon, dining, wellness breaks, and concierge logistics.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/package-business.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    }
+]

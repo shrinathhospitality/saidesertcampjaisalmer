@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-label="Family Legacy">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17110e"/><stop offset=".55" stop-color="#a75742"/><stop offset="1" stop-color="#e8c989"/></linearGradient>
+    <radialGradient id="r" cx="70%" cy="18%" r="70%"><stop offset="0" stop-color="#fff4d7" stop-opacity=".5"/><stop offset=".5" stop-color="#d8b26e" stop-opacity=".13"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .13"/></feComponentTransfer></filter>
+  </defs>
+  <rect width="1800" height="1200" fill="url(#g)"/>
+  <rect width="1800" height="1200" fill="url(#r)"/>
+  <g opacity=".26" fill="none" stroke="#fff5dc" stroke-width="2">
+    <path d="M120 930 C360 740 520 1040 760 820 S1240 650 1680 760"/>
+    <path d="M-60 360 C250 160 480 500 780 290 S1270 120 1870 260"/>
+  </g>
+  <g opacity=".28">
+    <circle cx="1420" cy="260" r="190" fill="#fff4d7"/>
+    <circle cx="1460" cy="300" r="260" fill="none" stroke="#fff4d7" stroke-width="2"/>
+  </g>
+  <rect x="135" y="130" width="1530" height="940" rx="34" fill="none" stroke="#fff5dc" stroke-opacity=".38" stroke-width="2"/>
+  <rect width="1800" height="1200" filter="url(#noise)" opacity=".65"/>
+  <text x="150" y="980" fill="#fff8e9" font-family="Cormorant Garamond, Georgia, serif" font-size="74" font-weight="600" letter-spacing="2">Family Legacy</text>
+  <text x="154" y="1040" fill="#fff8e9" opacity=".72" font-family="Manrope, Arial, sans-serif" font-size="24" letter-spacing="6">LUXURY HOTEL VISUAL PLACEHOLDER</text>
+</svg>

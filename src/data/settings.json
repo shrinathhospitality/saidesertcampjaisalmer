@@ -1,0 +1,18 @@
+{
+  "siteName": "Sai Desert Camp & Resort",
+  "tagline": "A private world of rare calm",
+  "baseUrl": "https://example.com",
+  "logoText": "Sai Desert Camp & Resort",
+  "logo": "/brand/logo.png",
+  "logoWidth": 314,
+  "logoHeight": 105,
+  "favicon": "/brand/favicon-32.png",
+  "bookNowLabel": "Book Now",
+  "primaryColor": "#d8b26e",
+  "darkColor": "#10100e",
+  "currency": "USD",
+  "defaultImage": "/assets/hero-1.svg",
+  "analyticsEnabled": false,
+  "newsletterTitle": "Private notes from the estate",
+  "newsletterText": "Receive seasonal journeys, chef collaborations, wellness rituals, and preferred-stay privileges."
+}

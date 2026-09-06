@@ -1,0 +1,66 @@
+[
+  {
+    "id": "slow-luxury-new-rules",
+    "title": "The New Rules of Slow Luxury",
+    "category": "Design",
+    "date": "2026-07-01",
+    "author": "Editorial Studio",
+    "featured": true,
+    "excerpt": "Why the most desirable hotels are replacing spectacle with privacy, tactility, and a deeper sense of place.",
+    "image": "/assets/blog-1.svg",
+    "tags": ["luxury", "design", "hospitality"],
+    "content": [
+      "Slow luxury is not minimal service. It is the discipline of removing friction until a stay feels effortless.",
+      "The next generation of resort design is rooted in privacy, local craft, sensory restraint, and experiences that unfold gradually.",
+      "At Sai Desert Camp & Resort, that philosophy appears in quiet arrival sequences, shaded gardens, calm material palettes, and service that anticipates rather than interrupts."
+    ]
+  },
+  {
+    "id": "seasonal-chef-table",
+    "title": "Inside a Seasonal Chef's Table",
+    "category": "Dining",
+    "date": "2026-06-18",
+    "author": "Culinary Team",
+    "featured": true,
+    "excerpt": "A look at fire-led menus, cellar pairings, regional farms, and intimate dining rituals.",
+    "image": "/assets/blog-2.svg",
+    "tags": ["dining", "chef", "wine"],
+    "content": [
+      "The chef's table is designed as a conversation between season, flame, and cellar.",
+      "Menus are edited daily around local harvests, aged pantry elements, and seafood selected for freshness and provenance.",
+      "Guests can add wine pairings, non-alcoholic ferment pairings, or a private kitchen tour before dinner."
+    ]
+  },
+  {
+    "id": "wellness-beyond-the-spa",
+    "title": "Wellness Beyond the Spa",
+    "category": "Wellness",
+    "date": "2026-05-30",
+    "author": "Wellness Director",
+    "featured": false,
+    "excerpt": "How movement, sleep, light, water, and nutrition turn a resort stay into a reset.",
+    "image": "/assets/blog-3.svg",
+    "tags": ["spa", "wellness", "ritual"],
+    "content": [
+      "A spa treatment is one chapter in a more complete wellness journey.",
+      "Our reset programs combine morning light, movement, nutrient-dense cuisine, hydrotherapy, restorative bodywork, and evening sleep rituals.",
+      "Each program can be adapted around intensity, recovery needs, and personal goals."
+    ]
+  },
+  {
+    "id": "destination-weekend-guide",
+    "title": "A Curated Weekend in Placeholder Bay",
+    "category": "Destination",
+    "date": "2026-05-12",
+    "author": "Concierge",
+    "featured": false,
+    "excerpt": "A polished itinerary of forts, gardens, private beaches, artisan studios, and sunset dining.",
+    "image": "/assets/blog-4.svg",
+    "tags": ["destination", "itinerary", "culture"],
+    "content": [
+      "A weekend in Placeholder Bay can be calm or highly curated.",
+      "Begin with a garden breakfast, continue to the old fort, visit artisan studios, and return for a private sunset dinner.",
+      "The concierge team can adapt each itinerary for families, couples, wellness travelers, or corporate guests."
+    ]
+  }
+]

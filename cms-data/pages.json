@@ -1,0 +1,245 @@
+[
+    {
+        "id": "page-home",
+        "slug": "home",
+        "path": "/",
+        "name": "Home",
+        "status": "published",
+        "order": 0,
+        "hero": {
+            "eyebrow": "",
+            "title": "Private 5-Star Luxury Resort",
+            "subtitle": "",
+            "image": "/assets/hero-1.svg",
+            "buttons": []
+        },
+        "seo": {
+            "title": "Private 5-Star Luxury Resort",
+            "description": "A private world of rare calm",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/hero-1.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-09-05T16:23:35+00:00"
+    },
+    {
+        "id": "page-about",
+        "slug": "about",
+        "path": "/about",
+        "name": "About",
+        "status": "published",
+        "order": 1,
+        "hero": {
+            "eyebrow": "About Us",
+            "title": "Hospitality with restraint, theatre, and soul",
+            "subtitle": "",
+            "image": "/assets/hero-2.svg",
+            "buttons": []
+        },
+        "seo": {
+            "title": "About Us",
+            "description": "Sai Desert Camp & Resort blends contemporary resort architecture with handcrafted detail, private gardens, cinematic pools, destination dining, and a spa program inspired by elemental rituals. Every suite and villa is designed to be edited, calm, and deeply personal.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/hero-2.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "page-rooms",
+        "slug": "rooms",
+        "path": "/rooms",
+        "name": "Rooms, Suites & Villas",
+        "status": "published",
+        "order": 2,
+        "hero": {
+            "eyebrow": "",
+            "title": "Rooms, Suites & Villas",
+            "subtitle": "",
+            "image": "",
+            "buttons": []
+        },
+        "seo": {
+            "title": "Rooms, Suites & Villas",
+            "description": "Explore luxury rooms, suites, villas, and private residences.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "page-packages",
+        "slug": "packages",
+        "path": "/packages",
+        "name": "Packages",
+        "status": "published",
+        "order": 3,
+        "hero": {
+            "eyebrow": "",
+            "title": "Luxury Packages",
+            "subtitle": "",
+            "image": "",
+            "buttons": []
+        },
+        "seo": {
+            "title": "Luxury Packages",
+            "description": "Curated hotel packages for romance, wellness, family travel, and executive retreats.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "page-gallery",
+        "slug": "gallery",
+        "path": "/gallery",
+        "name": "Gallery",
+        "status": "published",
+        "order": 4,
+        "hero": {
+            "eyebrow": "Gallery",
+            "title": "A cinematic view of the estate",
+            "subtitle": "Filter images and open the premium lightbox gallery.",
+            "image": "/assets/gallery-8.svg",
+            "buttons": []
+        },
+        "seo": {
+            "title": "Gallery",
+            "description": "Explore the resort's rooms, pool, spa, dining, weddings, and event spaces.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/gallery-8.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "page-blog",
+        "slug": "blog",
+        "path": "/blog",
+        "name": "Blog / Journal",
+        "status": "published",
+        "order": 5,
+        "hero": {
+            "eyebrow": "",
+            "title": "Journal",
+            "subtitle": "",
+            "image": "",
+            "buttons": []
+        },
+        "seo": {
+            "title": "Blog",
+            "description": "Sai Desert Camp & Resort journal with destination, dining, wellness, and design stories.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "page-contact",
+        "slug": "contact",
+        "path": "/contact",
+        "name": "Contact",
+        "status": "published",
+        "order": 6,
+        "hero": {
+            "eyebrow": "Contact",
+            "title": "Begin with a conversation",
+            "subtitle": "Reservations, celebrations, meetings, and bespoke journeys can all be shaped by our guest atelier.",
+            "image": "/assets/hero-3.svg",
+            "buttons": []
+        },
+        "seo": {
+            "title": "Contact",
+            "description": "Contact Sai Desert Camp & Resort for reservations, events, weddings, and guest inquiries.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "/assets/hero-3.svg",
+            "noindex": false
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "page-privacy-policy",
+        "slug": "privacy-policy",
+        "path": "/privacy-policy",
+        "name": "Privacy Policy",
+        "status": "published",
+        "order": 7,
+        "hero": {
+            "eyebrow": "",
+            "title": "Privacy Policy",
+            "subtitle": "",
+            "image": "",
+            "buttons": []
+        },
+        "seo": {
+            "title": "Privacy Policy",
+            "description": "Privacy policy placeholder for Sai Desert Camp & Resort.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "",
+            "noindex": true
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    },
+    {
+        "id": "page-terms-conditions",
+        "slug": "terms-conditions",
+        "path": "/terms-conditions",
+        "name": "Terms & Conditions",
+        "status": "published",
+        "order": 8,
+        "hero": {
+            "eyebrow": "",
+            "title": "Terms & Conditions",
+            "subtitle": "",
+            "image": "",
+            "buttons": []
+        },
+        "seo": {
+            "title": "Terms & Conditions",
+            "description": "Terms and conditions placeholder for Sai Desert Camp & Resort.",
+            "focusKeyword": "",
+            "canonical": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "",
+            "noindex": true
+        },
+        "createdAt": "2026-01-01T00:00:00+00:00",
+        "updatedAt": "2026-01-01T00:00:00+00:00"
+    }
+]
