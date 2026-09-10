@@ -62,12 +62,29 @@ export default function Footer() {
             </div>
           )}
         </div>
-        <div className="mt-14 flex flex-col justify-between gap-4 border-t border-pearl/10 pt-8 text-xs text-pearl/46 md:flex-row">
-          <p>{copyright}</p>
+        <div className="mt-14 flex items-center gap-4" aria-hidden="true">
+          <span className="h-px flex-1 bg-pearl/15" />
+          <span className="flex items-center gap-2 text-champagne/80">
+            <span className="text-[.5rem]">◇</span>
+            <span className="text-sm">◆</span>
+            <span className="text-[.5rem]">◇</span>
+          </span>
+          <span className="h-px flex-1 bg-pearl/15" />
+        </div>
+        <div className="mt-8 flex flex-col justify-between gap-3 text-xs text-pearl/46 md:flex-row md:items-center">
           <p>
-            {footer.credit?.text
-              ? (footer.credit.url ? <a href={footer.credit.url} className="hover:text-champagne">{footer.credit.text}</a> : footer.credit.text)
-              : 'Frontend-only React website powered by local JSON content.'}
+            {copyright}{' '}
+            <Link to="/privacy-policy" className="text-champagne underline decoration-champagne/40 underline-offset-2 hover:text-pearl">Privacy Policy</Link>
+            {' · '}
+            <Link to="/terms-conditions" className="text-champagne underline decoration-champagne/40 underline-offset-2 hover:text-pearl">Terms and Conditions</Link>
+          </p>
+          <p>
+            Created by{' '}
+            {footer.credit?.url ? (
+              <a href={footer.credit.url} target="_blank" rel="noopener noreferrer" className="font-bold text-champagne hover:text-pearl">{footer.credit?.text || 'Shrinath Solutions'}</a>
+            ) : (
+              <span className="font-bold text-champagne">{footer.credit?.text || 'Shrinath Solutions'}</span>
+            )}
           </p>
         </div>
       </div>

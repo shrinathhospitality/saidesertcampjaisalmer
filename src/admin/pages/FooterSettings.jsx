@@ -54,8 +54,8 @@ export default function FooterSettings() {
           <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Content</h2>
           <TextAreaField label="About text" rows={4} value={footer.aboutText} onChange={(e) => set({ aboutText: e.target.value })} />
           <TextField label="Copyright text" hint="Leave blank to auto-generate “© {year} {site name}. All rights reserved.”" value={footer.copyrightText} onChange={(e) => set({ copyrightText: e.target.value })} />
-          <TextField label="“Created by” credit text" value={footer.credit.text} onChange={(e) => setCredit({ text: e.target.value })} />
-          <TextField label="Credit link URL" value={footer.credit.url} onChange={(e) => setCredit({ url: e.target.value })} />
+          <TextField label="Credit name" hint="Shown in the footer as “Created by {name}”" value={footer.credit.text} onChange={(e) => setCredit({ text: e.target.value })} />
+          <TextField label="Credit link URL" placeholder="Optional — makes the name clickable" value={footer.credit.url} onChange={(e) => setCredit({ url: e.target.value })} />
           <CheckboxField label="Show newsletter signup block" checked={footer.showNewsletter} onChange={(e) => set({ showNewsletter: e.target.checked })} />
         </section>
 
