@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { FiArrowLeft, FiExternalLink } from 'react-icons/fi';
+import { FiArrowDown, FiArrowLeft, FiArrowUp, FiExternalLink, FiTrash2 } from 'react-icons/fi';
 import { contentApi } from '../services/content.js';
 import { useToast } from '../hooks/useToast.jsx';
 import { confirmDiscard, useUnsavedChangesWarning } from '../hooks/useUnsavedChanges.js';
@@ -32,6 +32,19 @@ export default function PageEditor() {
 
   const setHero = (patch) => setPage((p) => ({ ...p, hero: { ...p.hero, ...patch } }));
   const setSeo = (patch) => setPage((p) => ({ ...p, seo: { ...p.seo, ...patch } }));
+
+  const heroSlides = page.heroSlides || [];
+  const setHeroSlides = (next) => setPage((p) => ({ ...p, heroSlides: next }));
+  const updateSlide = (index, patch) => setHeroSlides(heroSlides.map((s, i) => (i === index ? { ...s, ...patch } : s)));
+  const addSlide = () => setHeroSlides([...heroSlides, { eyebrow: '', title: '', text: '', image: '', type: 'image' }]);
+  const removeSlide = (index) => setHeroSlides(heroSlides.filter((_, i) => i !== index));
+  const moveSlide = (index, dir) => {
+    const target = index + dir;
+    if (target < 0 || target >= heroSlides.length) return;
+    const next = [...heroSlides];
+    [next[index], next[target]] = [next[target], next[index]];
+    setHeroSlides(next);
+  };
 
   const handleSave = async () => {
     setSaving(true);
@@ -82,22 +95,48 @@ export default function PageEditor() {
           </p>
         </section>
 
-        <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Hero section</h2>
-          {page.slug === 'home' ? (
+        {page.slug === 'home' ? (
+          <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 lg:col-span-2">
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Hero slider</h2>
+              <button type="button" onClick={addSlide} className="rounded-lg border border-dashed border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-500 hover:border-slate-400">
+                + Add slide
+              </button>
+            </div>
             <p className="text-xs text-slate-400">
-              The homepage uses an animated multi-slide hero rather than a single hero block, so it isn't editable
-              field-by-field here yet. The SEO fields below still apply to the homepage.
+              The homepage hero rotates through these slides automatically. Each needs an image, an eyebrow label, a title, and supporting text.
             </p>
-          ) : (
-            <>
-              <TextField label="Eyebrow" value={page.hero.eyebrow} onChange={(e) => setHero({ eyebrow: e.target.value })} />
-              <TextField label="Title" value={page.hero.title} onChange={(e) => setHero({ title: e.target.value })} />
-              <TextAreaField label="Subtitle" rows={2} value={page.hero.subtitle} onChange={(e) => setHero({ subtitle: e.target.value })} />
-              <MediaPicker label="Background image" value={page.hero.image} onChange={(url) => setHero({ image: url })} />
-            </>
-          )}
-        </section>
+            {heroSlides.length === 0 && (
+              <p className="rounded-lg bg-slate-50 p-3 text-xs text-slate-400">No slides yet — add at least one so the homepage hero has something to show.</p>
+            )}
+            <div className="grid gap-4 sm:grid-cols-2">
+              {heroSlides.map((slide, index) => (
+                <div key={index} className="space-y-3 rounded-xl border border-slate-200 p-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">Slide {index + 1}</span>
+                    <div className="flex gap-1">
+                      <IconBtn onClick={() => moveSlide(index, -1)}><FiArrowUp /></IconBtn>
+                      <IconBtn onClick={() => moveSlide(index, 1)}><FiArrowDown /></IconBtn>
+                      <IconBtn danger onClick={() => removeSlide(index)}><FiTrash2 /></IconBtn>
+                    </div>
+                  </div>
+                  <MediaPicker label="Background image" value={slide.image} onChange={(url) => updateSlide(index, { image: url })} />
+                  <TextField label="Eyebrow" value={slide.eyebrow || ''} onChange={(e) => updateSlide(index, { eyebrow: e.target.value })} />
+                  <TextField label="Title" value={slide.title || ''} onChange={(e) => updateSlide(index, { title: e.target.value })} />
+                  <TextAreaField label="Supporting text" rows={2} value={slide.text || ''} onChange={(e) => updateSlide(index, { text: e.target.value })} />
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : (
+          <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Hero section</h2>
+            <TextField label="Eyebrow" value={page.hero.eyebrow} onChange={(e) => setHero({ eyebrow: e.target.value })} />
+            <TextField label="Title" value={page.hero.title} onChange={(e) => setHero({ title: e.target.value })} />
+            <TextAreaField label="Subtitle" rows={2} value={page.hero.subtitle} onChange={(e) => setHero({ subtitle: e.target.value })} />
+            <MediaPicker label="Background image" value={page.hero.image} onChange={(url) => setHero({ image: url })} />
+          </section>
+        )}
 
         <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 lg:col-span-2">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">SEO</h2>
@@ -118,5 +157,13 @@ export default function PageEditor() {
 
       <SaveBar dirty={Boolean(dirty)} saving={saving} onSave={handleSave} onDiscard={() => setPage(original)} />
     </div>
+  );
+}
+
+function IconBtn({ children, onClick, danger }) {
+  return (
+    <button type="button" onClick={onClick} className={`grid h-7 w-7 place-items-center rounded-lg border text-sm ${danger ? 'border-red-200 text-red-500 hover:bg-red-50' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
+      {children}
+    </button>
   );
 }

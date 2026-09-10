@@ -13,6 +13,29 @@
             "image": "/assets/hero-1.svg",
             "buttons": []
         },
+        "heroSlides": [
+            {
+                "eyebrow": "A New Language of Luxury",
+                "title": "Stillness, service, and cinematic beauty",
+                "text": "Wake to textured sunlight, private pools, curated rituals, and a level of hospitality that moves quietly around you.",
+                "image": "/assets/hero-1.svg",
+                "type": "image"
+            },
+            {
+                "eyebrow": "Suites & Villas",
+                "title": "Designed for privacy, framed by nature",
+                "text": "Generous indoor-outdoor sanctuaries with artisanal materials, sculptural baths, and terraces made for golden-hour dining.",
+                "image": "/assets/hero-2.svg",
+                "type": "image"
+            },
+            {
+                "eyebrow": "Dining, Spa & Celebration",
+                "title": "Experiences with a sense of occasion",
+                "text": "From candlelit tasting menus to wedding pavilions and restorative spa journeys, every detail is composed.",
+                "image": "/assets/hero-3.svg",
+                "type": "image"
+            }
+        ],
         "seo": {
             "title": "Private 5-Star Luxury Resort",
             "description": "A private world of rare calm",
@@ -24,7 +47,7 @@
             "noindex": false
         },
         "createdAt": "2026-01-01T00:00:00+00:00",
-        "updatedAt": "2026-09-05T16:23:35+00:00"
+        "updatedAt": "2026-09-10T16:17:50+00:00"
     },
     {
         "id": "page-about",

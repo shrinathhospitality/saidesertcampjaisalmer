@@ -7,10 +7,13 @@ import { FiArrowLeft, FiArrowRight, FiCalendar, FiMapPin } from 'react-icons/fi'
 import { useContent } from '../../context/ContentContext.jsx';
 
 export default function Hero() {
-  const { hotel } = useContent();
+  const { hotel, getPage } = useContent();
   const [active, setActive] = useState(0);
   const [swiper, setSwiper] = useState(null);
-  const slides = hotel.heroSlides || [];
+  // CMS-managed slides (editable at /admin/pages/page-home) take priority;
+  // fall back to the bundled copy if the API is unreachable or has none yet.
+  const homePage = getPage('/');
+  const slides = homePage?.heroSlides?.length ? homePage.heroSlides : hotel.heroSlides || [];
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-ink text-pearl">
