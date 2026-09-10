@@ -12,6 +12,7 @@ import TestimonialSlider from '../components/TestimonialSlider.jsx';
 import FAQ from '../components/FAQ.jsx';
 import CTA from '../components/CTA.jsx';
 import AmenityIcon from '../components/AmenityIcon.jsx';
+import MapEmbed from '../components/MapEmbed.jsx';
 import { useContent } from '../context/ContentContext.jsx';
 import { faqSchema } from '../seo/schema.js';
 
@@ -170,12 +171,13 @@ export default function Home() {
           </div>
           <div className="rounded-[2rem] border border-ink/10 bg-pearl p-8 shadow-luxury">
             <p className="mb-4 text-xs font-bold uppercase tracking-[.35em] text-bronze">Google Maps</p>
-            <div className="grid min-h-[26rem] place-items-center rounded-[1.5rem] bg-[#d8ccb8] p-8 text-center">
-              <div>
-                <p className="font-display text-5xl">Map Placeholder</p>
-                <p className="mt-4 max-w-md text-sm leading-7 text-ink/60">{settings.contact?.mapEmbed}</p>
-              </div>
-            </div>
+            <MapEmbed
+              siteName={settings.siteName}
+              address={settings.contact?.address}
+              mapLink={settings.contact?.mapLink}
+              mapEmbed={settings.contact?.mapEmbed}
+              minHeightClass="min-h-[22rem]"
+            />
           </div>
         </div>
       </section>

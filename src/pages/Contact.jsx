@@ -4,6 +4,7 @@ import Page from '../components/Page.jsx';
 import SEO from '../seo/SEO.jsx';
 import PageHero from '../components/PageHero.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
+import MapEmbed from '../components/MapEmbed.jsx';
 import { useContent } from '../context/ContentContext.jsx';
 
 const EMPTY_FORM = { name: '', email: '', phone: '', inquiryType: 'General', message: '', website: '' };
@@ -94,11 +95,15 @@ export default function Contact() {
       </section>
       <section className="pb-24">
         <div className="container-lux">
-          <div className="grid min-h-[28rem] place-items-center rounded-[2rem] bg-ink p-8 text-center text-pearl shadow-luxury">
-            <div>
-              <p className="font-display text-6xl">Google Maps Placeholder</p>
-              <p className="mt-4 max-w-xl text-pearl/62">{settings.contact?.mapEmbed}</p>
-            </div>
+          <div className="rounded-[2rem] bg-ink p-8 text-center text-pearl shadow-luxury">
+            <MapEmbed
+              siteName={settings.siteName}
+              address={settings.contact?.address}
+              mapLink={settings.contact?.mapLink}
+              mapEmbed={settings.contact?.mapEmbed}
+              minHeightClass="min-h-[26rem]"
+              theme="dark"
+            />
           </div>
         </div>
       </section>
