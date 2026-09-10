@@ -36,7 +36,23 @@ jobs:
       - name: Build frontend
         run: npm run build
 
-      - name: Deploy dist/ to public_html via FTP
+      # A small canary with a stable filename but content that changes on
+      # every commit. Used below to confirm the live site actually picked up
+      # this deploy -- see the note on FTP reliability further down.
+      - name: Write deploy marker
+        run: echo "${{ github.sha }}" > dist/deploy-marker.txt
+
+      # This host's FTP has shown occasional transient failures on individual
+      # file transfers (a passive-mode data connection intermittently refused
+      # mid-sync), and on at least one occasion the action reported success
+      # while several files silently failed to transfer at all. dangerous-clean-slate
+      # avoids relying on the action's server-side diff/state tracking (the
+      # likely source of that false "nothing changed"), trading a slower,
+      # full sync every deploy for one that doesn't depend on stored state
+      # potentially going stale. uploads/, cms-data/, and cms-backups/ stay
+      # protected via exclude either way.
+      - name: Deploy dist/ to public_html via FTP (attempt 1)
+        id: deploy1
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -45,13 +61,57 @@ jobs:
           protocol: ftp
           local-dir: ./dist/
           server-dir: ./public_html/
-          # Never let a deploy touch live CMS data or guest-uploaded media, even
-          # if it ever ends up nested under public_html on a restricted plan.
-          # cms-data/ and cms-backups/ are managed manually, outside this
-          # pipeline entirely — see HOSTINGER-DEPLOYMENT.md.
+          dangerous-clean-slate: true
           exclude: |
             **/.git*
             **/.git*/**
             uploads/**
             cms-data/**
             cms-backups/**
+
+      - name: Verify deploy actually landed (attempt 1)
+        id: verify1
+        run: |
+          sleep 5
+          live=$(curl -fsS --max-time 20 "https://saidesertcampjaisalmer.com/deploy-marker.txt" || echo "FETCH_FAILED")
+          echo "expected=${{ github.sha }}"
+          echo "live=$live"
+          if [ "$live" != "${{ github.sha }}" ]; then
+            echo "mismatch=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "mismatch=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # A known-flaky host can drop files even on a full-slate sync (we've
+      # seen a single file fail transiently and succeed on immediate retry).
+      # One automatic retry catches that class of failure without a human
+      # needing to notice and re-run the workflow manually.
+      - name: Deploy dist/ to public_html via FTP (retry)
+        if: steps.verify1.outputs.mismatch == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          local-dir: ./dist/
+          server-dir: ./public_html/
+          dangerous-clean-slate: true
+          exclude: |
+            **/.git*
+            **/.git*/**
+            uploads/**
+            cms-data/**
+            cms-backups/**
+
+      - name: Verify deploy actually landed (final)
+        if: steps.verify1.outputs.mismatch == 'true'
+        run: |
+          sleep 5
+          live=$(curl -fsS --max-time 20 "https://saidesertcampjaisalmer.com/deploy-marker.txt" || echo "FETCH_FAILED")
+          echo "expected=${{ github.sha }}"
+          echo "live=$live"
+          if [ "$live" != "${{ github.sha }}" ]; then
+            echo "::error::Deploy verification failed after retry -- the live site does not match this commit. Check FTP connectivity/credentials and re-run this workflow."
+            exit 1
+          fi
