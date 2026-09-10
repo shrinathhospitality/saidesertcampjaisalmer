@@ -15,8 +15,16 @@ import AmenityIcon from '../components/AmenityIcon.jsx';
 import { useContent } from '../context/ContentContext.jsx';
 import { faqSchema } from '../seo/schema.js';
 
+const DEFAULT_WELCOME_IMAGE = { image: '/assets/hero-2.svg', captionTitle: 'Quiet grandeur', captionText: 'Architecture, ritual, and service arranged around privacy.' };
+
 export default function Home() {
-  const { hotel, settings, rooms, packages, amenities, gallery, testimonials, faqs, blogs } = useContent();
+  const { hotel, settings, rooms, packages, amenities, gallery, testimonials, faqs, blogs, getPage } = useContent();
+  // CMS-managed content (editable at /admin/pages/page-home) takes priority;
+  // falls back to the bundled copy if the API is unreachable or has none yet.
+  const homePage = getPage('/');
+  const welcomeImage = homePage?.welcomeImage?.image ? homePage.welcomeImage : DEFAULT_WELCOME_IMAGE;
+  const experiences = homePage?.experiences?.length ? homePage.experiences : hotel.experiences;
+  const attractions = homePage?.attractions?.length ? homePage.attractions : hotel.attractions;
   const featuredRooms = rooms.filter((room) => room.featured).slice(0, 3);
   const featuredPackages = packages.filter((offer) => offer.featured).slice(0, 2);
   return (
@@ -28,10 +36,10 @@ export default function Home() {
         <div className="bg-orb right-0 top-20" />
         <div className="container-lux grid items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
           <div className="relative">
-            <img src="/assets/hero-2.svg" alt="Luxury welcome" className="rounded-[2rem] shadow-luxury" />
+            <img src={welcomeImage.image} alt={welcomeImage.captionTitle || 'Welcome'} className="rounded-[2rem] shadow-luxury" />
             <div className="glass-dark absolute -bottom-8 right-6 max-w-xs rounded-[1.5rem] p-5 text-pearl">
-              <p className="font-display text-4xl text-champagne">Quiet grandeur</p>
-              <p className="mt-2 text-sm leading-6 text-pearl/70">Architecture, ritual, and service arranged around privacy.</p>
+              <p className="font-display text-4xl text-champagne">{welcomeImage.captionTitle}</p>
+              <p className="mt-2 text-sm leading-6 text-pearl/70">{welcomeImage.captionText}</p>
             </div>
           </div>
           <div>
@@ -86,7 +94,7 @@ export default function Home() {
 
       <section className="section-pad">
         <div className="container-lux grid gap-5 lg:grid-cols-5">
-          {(hotel.experiences || []).map((item, index) => (
+          {(experiences || []).map((item, index) => (
             <article key={item.title} className={`card-lift group relative min-h-[28rem] overflow-hidden rounded-[2rem] ${index === 0 || index === 4 ? 'lg:col-span-2' : ''}`}>
               <img src={item.image} alt={item.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent" />
@@ -104,7 +112,7 @@ export default function Home() {
         <div className="container-lux grid items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
           <SectionTitle eyebrow="Nearby Attractions" title="A destination with culture, coastline, and calm" text="The concierge team can arrange private guides, sunrise walks, cultural access, yacht charters, artisan studio visits, and family-friendly discovery." light />
           <div className="grid gap-5">
-            {(hotel.attractions || []).map((item) => (
+            {(attractions || []).map((item) => (
               <article key={item.title} className="grid grid-cols-[9rem_1fr] items-center gap-5 rounded-[1.6rem] border border-pearl/10 bg-pearl/[.04] p-3">
                 <img src={item.image} alt={item.title} className="h-28 w-36 rounded-[1.2rem] object-cover" />
                 <div>

@@ -33,18 +33,29 @@ export default function PageEditor() {
   const setHero = (patch) => setPage((p) => ({ ...p, hero: { ...p.hero, ...patch } }));
   const setSeo = (patch) => setPage((p) => ({ ...p, seo: { ...p.seo, ...patch } }));
 
-  const heroSlides = page.heroSlides || [];
-  const setHeroSlides = (next) => setPage((p) => ({ ...p, heroSlides: next }));
-  const updateSlide = (index, patch) => setHeroSlides(heroSlides.map((s, i) => (i === index ? { ...s, ...patch } : s)));
-  const addSlide = () => setHeroSlides([...heroSlides, { eyebrow: '', title: '', text: '', image: '', type: 'image' }]);
-  const removeSlide = (index) => setHeroSlides(heroSlides.filter((_, i) => i !== index));
-  const moveSlide = (index, dir) => {
-    const target = index + dir;
-    if (target < 0 || target >= heroSlides.length) return;
-    const next = [...heroSlides];
-    [next[index], next[target]] = [next[target], next[index]];
-    setHeroSlides(next);
+  /** Generic add/remove/move/update helpers for a page-level array field (heroSlides, experiences, attractions...). */
+  const listHelpers = (key, blankItem) => {
+    const list = page[key] || [];
+    const setList = (next) => setPage((p) => ({ ...p, [key]: next }));
+    return {
+      list,
+      update: (index, patch) => setList(list.map((item, i) => (i === index ? { ...item, ...patch } : item))),
+      add: () => setList([...list, blankItem]),
+      remove: (index) => setList(list.filter((_, i) => i !== index)),
+      move: (index, dir) => {
+        const target = index + dir;
+        if (target < 0 || target >= list.length) return;
+        const next = [...list];
+        [next[index], next[target]] = [next[target], next[index]];
+        setList(next);
+      },
+    };
   };
+
+  const heroSlides = listHelpers('heroSlides', { eyebrow: '', title: '', text: '', image: '', type: 'image' });
+  const experiences = listHelpers('experiences', { title: '', text: '', image: '' });
+  const attractions = listHelpers('attractions', { title: '', distance: '', image: '' });
+  const setWelcomeImage = (patch) => setPage((p) => ({ ...p, welcomeImage: { ...p.welcomeImage, ...patch } }));
 
   const handleSave = async () => {
     setSaving(true);
@@ -96,38 +107,103 @@ export default function PageEditor() {
         </section>
 
         {page.slug === 'home' ? (
-          <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 lg:col-span-2">
-            <div className="flex items-center justify-between">
-              <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Hero slider</h2>
-              <button type="button" onClick={addSlide} className="rounded-lg border border-dashed border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-500 hover:border-slate-400">
-                + Add slide
-              </button>
-            </div>
-            <p className="text-xs text-slate-400">
-              The homepage hero rotates through these slides automatically. Each needs an image, an eyebrow label, a title, and supporting text.
-            </p>
-            {heroSlides.length === 0 && (
-              <p className="rounded-lg bg-slate-50 p-3 text-xs text-slate-400">No slides yet — add at least one so the homepage hero has something to show.</p>
-            )}
-            <div className="grid gap-4 sm:grid-cols-2">
-              {heroSlides.map((slide, index) => (
-                <div key={index} className="space-y-3 rounded-xl border border-slate-200 p-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">Slide {index + 1}</span>
-                    <div className="flex gap-1">
-                      <IconBtn onClick={() => moveSlide(index, -1)}><FiArrowUp /></IconBtn>
-                      <IconBtn onClick={() => moveSlide(index, 1)}><FiArrowDown /></IconBtn>
-                      <IconBtn danger onClick={() => removeSlide(index)}><FiTrash2 /></IconBtn>
+          <>
+            <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 lg:col-span-2">
+              <div className="flex items-center justify-between">
+                <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Hero slider</h2>
+                <button type="button" onClick={heroSlides.add} className="rounded-lg border border-dashed border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-500 hover:border-slate-400">
+                  + Add slide
+                </button>
+              </div>
+              <p className="text-xs text-slate-400">
+                The homepage hero rotates through these slides automatically. Each needs an image, an eyebrow label, a title, and supporting text.
+              </p>
+              {heroSlides.list.length === 0 && (
+                <p className="rounded-lg bg-slate-50 p-3 text-xs text-slate-400">No slides yet — add at least one so the homepage hero has something to show.</p>
+              )}
+              <div className="grid gap-4 sm:grid-cols-2">
+                {heroSlides.list.map((slide, index) => (
+                  <div key={index} className="space-y-3 rounded-xl border border-slate-200 p-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">Slide {index + 1}</span>
+                      <div className="flex gap-1">
+                        <IconBtn onClick={() => heroSlides.move(index, -1)}><FiArrowUp /></IconBtn>
+                        <IconBtn onClick={() => heroSlides.move(index, 1)}><FiArrowDown /></IconBtn>
+                        <IconBtn danger onClick={() => heroSlides.remove(index)}><FiTrash2 /></IconBtn>
+                      </div>
                     </div>
+                    <MediaPicker label="Background image" value={slide.image} onChange={(url) => heroSlides.update(index, { image: url })} />
+                    <TextField label="Eyebrow" value={slide.eyebrow || ''} onChange={(e) => heroSlides.update(index, { eyebrow: e.target.value })} />
+                    <TextField label="Title" value={slide.title || ''} onChange={(e) => heroSlides.update(index, { title: e.target.value })} />
+                    <TextAreaField label="Supporting text" rows={2} value={slide.text || ''} onChange={(e) => heroSlides.update(index, { text: e.target.value })} />
                   </div>
-                  <MediaPicker label="Background image" value={slide.image} onChange={(url) => updateSlide(index, { image: url })} />
-                  <TextField label="Eyebrow" value={slide.eyebrow || ''} onChange={(e) => updateSlide(index, { eyebrow: e.target.value })} />
-                  <TextField label="Title" value={slide.title || ''} onChange={(e) => updateSlide(index, { title: e.target.value })} />
-                  <TextAreaField label="Supporting text" rows={2} value={slide.text || ''} onChange={(e) => updateSlide(index, { text: e.target.value })} />
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+              </div>
+            </section>
+
+            <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Welcome image</h2>
+              <p className="text-xs text-slate-400">The framed image and caption card just below the hero.</p>
+              <MediaPicker label="Image" value={page.welcomeImage?.image || ''} onChange={(url) => setWelcomeImage({ image: url })} />
+              <TextField label="Caption title" value={page.welcomeImage?.captionTitle || ''} onChange={(e) => setWelcomeImage({ captionTitle: e.target.value })} />
+              <TextAreaField label="Caption text" rows={2} value={page.welcomeImage?.captionText || ''} onChange={(e) => setWelcomeImage({ captionText: e.target.value })} />
+            </section>
+
+            <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5">
+              <div className="flex items-center justify-between">
+                <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Experiences</h2>
+                <button type="button" onClick={experiences.add} className="rounded-lg border border-dashed border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-500 hover:border-slate-400">
+                  + Add
+                </button>
+              </div>
+              <p className="text-xs text-slate-400">The Restaurant / Pool / Spa style cards (e.g. tents, dining, bonfire, cultural evening).</p>
+              {experiences.list.length === 0 && <p className="rounded-lg bg-slate-50 p-3 text-xs text-slate-400">None yet.</p>}
+              <div className="space-y-3">
+                {experiences.list.map((item, index) => (
+                  <div key={index} className="space-y-3 rounded-xl border border-slate-200 p-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">Item {index + 1}</span>
+                      <div className="flex gap-1">
+                        <IconBtn onClick={() => experiences.move(index, -1)}><FiArrowUp /></IconBtn>
+                        <IconBtn onClick={() => experiences.move(index, 1)}><FiArrowDown /></IconBtn>
+                        <IconBtn danger onClick={() => experiences.remove(index)}><FiTrash2 /></IconBtn>
+                      </div>
+                    </div>
+                    <MediaPicker label="Image" value={item.image} onChange={(url) => experiences.update(index, { image: url })} />
+                    <TextField label="Title" value={item.title || ''} onChange={(e) => experiences.update(index, { title: e.target.value })} />
+                    <TextAreaField label="Text" rows={2} value={item.text || ''} onChange={(e) => experiences.update(index, { text: e.target.value })} />
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5">
+              <div className="flex items-center justify-between">
+                <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Nearby attractions</h2>
+                <button type="button" onClick={attractions.add} className="rounded-lg border border-dashed border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-500 hover:border-slate-400">
+                  + Add
+                </button>
+              </div>
+              {attractions.list.length === 0 && <p className="rounded-lg bg-slate-50 p-3 text-xs text-slate-400">None yet.</p>}
+              <div className="space-y-3">
+                {attractions.list.map((item, index) => (
+                  <div key={index} className="space-y-3 rounded-xl border border-slate-200 p-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">Item {index + 1}</span>
+                      <div className="flex gap-1">
+                        <IconBtn onClick={() => attractions.move(index, -1)}><FiArrowUp /></IconBtn>
+                        <IconBtn onClick={() => attractions.move(index, 1)}><FiArrowDown /></IconBtn>
+                        <IconBtn danger onClick={() => attractions.remove(index)}><FiTrash2 /></IconBtn>
+                      </div>
+                    </div>
+                    <MediaPicker label="Image" value={item.image} onChange={(url) => attractions.update(index, { image: url })} />
+                    <TextField label="Title" value={item.title || ''} onChange={(e) => attractions.update(index, { title: e.target.value })} />
+                    <TextField label="Distance" placeholder="e.g. 12 min" value={item.distance || ''} onChange={(e) => attractions.update(index, { distance: e.target.value })} />
+                  </div>
+                ))}
+              </div>
+            </section>
+          </>
         ) : (
           <section className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Hero section</h2>

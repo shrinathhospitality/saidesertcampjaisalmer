@@ -36,6 +36,23 @@
                 "type": "image"
             }
         ],
+        "welcomeImage": {
+            "image": "/assets/hero-2.svg",
+            "captionTitle": "Quiet grandeur",
+            "captionText": "Architecture, ritual, and service arranged around privacy."
+        },
+        "experiences": [
+            { "title": "Restaurant", "text": "A fire-led culinary atelier with seasonal tasting menus, cellar pairings, and private chef tables.", "image": "/assets/restaurant.svg" },
+            { "title": "Infinity Pool", "text": "Tiered reflective pools, shaded cabanas, sunset service, and quiet adult-only terraces.", "image": "/assets/pool.svg" },
+            { "title": "Spa", "text": "Elemental rituals, hammam suites, hydrotherapy gardens, sound therapy, and expert bodywork.", "image": "/assets/spa.svg" },
+            { "title": "Conference Hall", "text": "A refined grand salon with modular layouts, discreet technology, and dedicated event concierges.", "image": "/assets/conference.svg" },
+            { "title": "Wedding Venue", "text": "Garden pavilions, ocean-view lawns, couture menus, and a full celebration design studio.", "image": "/assets/wedding.svg" }
+        ],
+        "attractions": [
+            { "title": "Old Fort Walk", "distance": "12 min", "image": "/assets/attraction-1.svg" },
+            { "title": "Sapphire Bay", "distance": "18 min", "image": "/assets/attraction-2.svg" },
+            { "title": "Botanical Garden", "distance": "25 min", "image": "/assets/attraction-3.svg" }
+        ],
         "seo": {
             "title": "Private 5-Star Luxury Resort",
             "description": "A private world of rare calm",
