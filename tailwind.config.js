@@ -14,7 +14,8 @@ export default {
       },
       fontFamily: {
         display: ['Cormorant Garamond', 'serif'],
-        body: ['Manrope', 'sans-serif']
+        body: ['Manrope', 'sans-serif'],
+        script: ['Sacramento', 'cursive']
       },
       boxShadow: {
         luxury: '0 30px 80px rgba(16,16,14,.18)',

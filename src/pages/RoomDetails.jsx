@@ -24,7 +24,7 @@ export default function RoomDetails() {
       <PageHero eyebrow="Room Details" title={room.title} text={room.shortDescription} image={room.image} breadcrumbs={[{ label: 'Rooms', path: '/rooms' }, { label: room.title }]} />
       <section className="section-pad">
         <div className="container-lux grid gap-10 lg:grid-cols-[1.2fr_.8fr]">
-          <div>
+          <div className="min-w-0">
             <ImageSlider images={room.gallery} title={room.title} />
             <SectionTitle eyebrow="The Space" title="A detailed private sanctuary" text={room.description} />
             <div className="mt-8 grid gap-6 md:grid-cols-2">

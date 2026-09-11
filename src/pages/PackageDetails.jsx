@@ -23,7 +23,7 @@ export default function PackageDetails() {
       <PageHero eyebrow="Package Details" title={offer.title} text={offer.shortDescription} image={offer.image} breadcrumbs={[{ label: 'Packages', path: '/packages' }, { label: offer.title }]} />
       <section className="section-pad">
         <div className="container-lux grid gap-10 lg:grid-cols-[1.2fr_.8fr]">
-          <div>
+          <div className="min-w-0">
             <ImageSlider images={offer.gallery} title={offer.title} />
             <SectionTitle eyebrow={offer.duration} title="A curated journey from arrival to farewell" text={offer.description} />
             <div className="mt-8 grid gap-6 md:grid-cols-2">

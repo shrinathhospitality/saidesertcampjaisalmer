@@ -2,7 +2,7 @@ import Page from '../components/Page.jsx';
 import SEO from '../seo/SEO.jsx';
 import PageHero from '../components/PageHero.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
-import RoomCard from '../components/cards/RoomCard.jsx';
+import RoomCategoryCard from '../components/cards/RoomCategoryCard.jsx';
 import CTA from '../components/CTA.jsx';
 import { useContent } from '../context/ContentContext.jsx';
 
@@ -22,9 +22,9 @@ export default function Rooms() {
       />
       <section className="section-pad">
         <div className="container-lux">
-          <SectionTitle eyebrow="Accommodation" title="Every category, managed from the admin dashboard" align="center" />
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {rooms.map((room) => <RoomCard key={room.id} room={room} />)}
+          <SectionTitle eyebrow="Tent Categories" title="Comfort, Built for the Desert" align="center" text="Every category is managed from the admin dashboard — occupancy, pricing, inclusions, and photos can all be updated at any time." />
+          <div className="mt-12 grid gap-8">
+            {rooms.map((room, index) => <RoomCategoryCard key={room.id} room={room} index={index} />)}
           </div>
         </div>
       </section>

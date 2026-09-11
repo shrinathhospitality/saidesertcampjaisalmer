@@ -11,7 +11,7 @@
     "darkColor": "#10100e",
     "currency": "USD",
     "defaultImage": "/assets/hero-1.svg",
-    "newsletterTitle": "Private notes from the estate",
+    "newsletterTitle": "Begin Your Desert Story",
     "newsletterText": "Receive seasonal journeys, chef collaborations, wellness rituals, and preferred-stay privileges.",
     "contact": {
         "phone": "+1 000 000 0000",
@@ -63,13 +63,24 @@
     "footer": {
         "aboutText": "A destination resort imagined for travelers who prefer quiet grandeur, intuitive service, and spaces that feel collected rather than decorated.",
         "showNewsletter": true,
+        "newsletterEyebrow": "Stay Closer to Extraordinary",
+        "newsletterBackgroundImage": "/uploads/images/media-536a401e27606a9dc194.jpg",
+        "scriptTagline": "Jaisalmer Awaits",
+        "tagline": "Desert People Stories Forever",
         "copyrightText": "",
         "credit": {
             "text": "Shrinath Solutions",
             "url": ""
         },
+        "experienceLinks": [
+            { "label": "Luxury Tents", "path": "/rooms" },
+            { "label": "Desert Safari", "path": "/packages" },
+            { "label": "Cultural Evening", "path": "/packages" },
+            { "label": "Dining", "path": "/about" }
+        ],
         "blocks": {
             "quickLinks": true,
+            "experiences": true,
             "legal": true,
             "contact": true,
             "social": true
